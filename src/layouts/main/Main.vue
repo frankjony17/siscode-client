@@ -48,7 +48,7 @@
     </template>
     <!-- /Navbar -->
 
-      <div class="content-wrapper" style="background-color: #cfd0d2">
+      <div class="content-wrapper">
 
         <div class="router-view">
           <div class="router-content">
