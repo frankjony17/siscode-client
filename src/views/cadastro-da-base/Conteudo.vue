@@ -27,43 +27,39 @@
       </vs-col>
     </vs-row>
     <!-- End Input Text -->
-    <br>
-    <!-- Labels -->
-    <vs-row>
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
-        <label for class="vs-input--label">Disciplina</label>
-      </vs-col>
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
-        <label for class="vs-input--label" style="text-align: right">Matérias</label>
-      </vs-col>
-    </vs-row>
     <!-- Combobox - Select -->
     <vs-row>
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
-        <v-select
-          :options="disciplinaList"
-          label="nome"
-          index="id"
-          style="width: 90%;"
-          @input="doSomething"
-          placeholder="Lista de Disciplinas"
-        />
-        <vx-tooltip text="Selecione uma Disciplina!" position="right" >
-          <vs-button type="line" icon="info" />
-        </vx-tooltip>
+        <div class="label-input-siscode">
+          <label for class="vs-input--label">Disciplina</label>
+          <v-select
+            :options="disciplinaList"
+            label="nome"
+            index="id"
+            style="width: 90%;"
+            @input="doSomething"
+            placeholder="Lista de Disciplinas"
+          />
+          <vx-tooltip text="Selecione uma Disciplina!" position="right" >
+            <vs-button type="line" icon="info" />
+          </vx-tooltip>
+        </div>
       </vs-col>
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
-        <v-select
-          :options="materiaList"
-          label="nome"
-          index="id"
-          style="width: 98%;"
-          @input="doSomething"
-          placeholder="Lista de Matérias"
-        />
-        <vx-tooltip text="Selecione uma Matéria!" position="right" >
-          <vs-button type="line" icon="info" />
-        </vx-tooltip>
+        <div class="label-input-siscode">
+          <label for class="vs-input--label">Matérias</label>
+          <v-select
+            :options="materiaList"
+            label="nome"
+            index="id"
+            style="width: 98%;"
+            @input="doSomething"
+            placeholder="Lista de Matérias"
+          />
+          <vx-tooltip text="Selecione uma Matéria!" position="right" >
+            <vs-button type="line" icon="info" />
+          </vx-tooltip>
+        </div>
       </vs-col>
     </vs-row>
     <!-- End Combobox - Select -->

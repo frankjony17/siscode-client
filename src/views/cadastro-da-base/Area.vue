@@ -1,5 +1,5 @@
 <template>
-  <vx-card title="Simulado/Elaboração/Cadastros/Áreas">
+  <vx-card title="Simulado/Elaboração/Cadastros/Áreas" fixed-height="true">
     <vs-row vs-w="12">
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="8" vs-sm="6" vs-xs="12">
         <vs-input
@@ -52,4 +52,5 @@ export default {
   .vs-button
     width 135px
     margin 5px
+
 </style>

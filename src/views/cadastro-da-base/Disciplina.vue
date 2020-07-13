@@ -1,6 +1,7 @@
 <template>
-  <vx-card title="Simulado/Elaboração/
-  Cadastros/Disciplina">
+  <vx-card
+    title="Simulado/Elaboração/Cadastros/Disciplina"
+  >
     <vs-row vs-w="12">
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="8" vs-sm="6" vs-xs="12">
         <vs-input
@@ -151,5 +152,4 @@ export default {
     color #b8c2cc
     padding-left 0
     font-size smaller
-
 </style>

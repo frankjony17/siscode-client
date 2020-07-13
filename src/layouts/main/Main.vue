@@ -48,7 +48,7 @@
     </template>
     <!-- /Navbar -->
 
-      <div class="content-wrapper">
+      <div class="content-wrapper" ref="content-wrapper">
 
         <div class="router-view">
           <div class="router-content">
@@ -95,7 +95,7 @@
               </div>
             </transition>
 
-            <div class="content-area__content">
+            <div class="content-area__content" style="height: 100%">
 
               <back-to-top bottom="5%" :right="$vs.rtl ? 'calc(100% - 2.2rem - 38px)' : '30px'" visibleoffset="500" v-if="!hideScrollToTop">
                 <vs-button icon-pack="feather" icon="icon-arrow-up" class="shadow-lg btn-back-to-top" />
