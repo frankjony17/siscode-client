@@ -19,50 +19,28 @@ export default [
       {
         url: '/dashboard',
         name: 'Dashboard',
-        slug: 'simuladoDashboard',
+        slug: 'simulado-dashboard',
         icon: 'ActivityIcon'
       },
       {
         url: '/estatistica',
         name: 'Elaboração',
-        slug: 'simuladoElaboracao',
+        slug: 'simulado-elaboracao',
         submenu: [
           {
             url: '/cadastro-da-base',
             name: 'Cadastros Gerais',
-            slug: 'cadastroDaBase'
+            slug: 'cadastro-da-base'
           },
           {
-            url: '/estatistica',
+            url: '/estatistica/questoes-gerais',
             name: 'Estatística',
             slug: 'estatistica'
-            // submenu: [
-            //   {
-            //     url: '/estatistica/questoes-materia',
-            //     name: '1.2.1 - Questões/Matéria',
-            //     slug: 'estatisticaQuestoesMateria'
-            //   },
-            //   {
-            //     url: '/estatistica/questoes-conteudo',
-            //     name: '1.2.2 - Questões/Conteúdo',
-            //     slug: 'estatisticaQuestoesConteudo'
-            //   },
-            //   {
-            //     url: '/estatistica/media-questoes-disciplina',
-            //     name: '1.2.3 - Media de Questões/disciplina',
-            //     slug: 'estatisticaMediaQuestoesDisciplina'
-            //   },
-            //   {
-            //     url: '/estatistica/dashboard-estatistico',
-            //     name: '1.2.4 - Dashboard Estatístico',
-            //     slug: 'estatisticaDashboardEstatistico'
-            //   }
-            // ]
           },
           {
-            url: '/solicitacao-questoes',
-            name: 'Solicitação de Questões',
-            slug: 'solicitacaoDeQuestoes'
+            url: '/solicitacao-questoes/',
+            name: 'Solicitação/Questões',
+            slug: 'solicitacao-questoes'
             // submenu: [
             //   {
             //     url: '/solicitacao-questoes/gerar-id-prova',
@@ -155,45 +133,3 @@ export default [
     icon: ''
   }
 ]
-// submenu: [
-//   {
-//     url: '/cadastro-da-base/area',
-//     name: '1.1.1 - Área',
-//     slug: 'cadastroDaBaseArea'
-//   },
-//   {
-//     url: '/cadastro-da-base/disciplina',
-//     name: '1.1.2 - disciplina',
-//     slug: 'cadastroDaBaseDisciplina'
-//   },
-//   {
-//     url: '/cadastro-da-base/materia',
-//     name: '1.1.3 - Matéria',
-//     slug: 'cadastroDaBaseMateria'
-//   },
-//   {
-//     url: '/cadastro-da-base/conteudo',
-//     name: '1.1.4 - Conteúdo',
-//     slug: 'cadastroDaBaseConteudo'
-//   },
-//   {
-//     url: '/cadastro-da-base/ensino',
-//     name: '1.1.5 - Ensino',
-//     slug: 'cadastroDaBaseEnsino'
-//   },
-//   {
-//     url: '/cadastro-da-base/prova',
-//     name: '1.1.6 - Prova',
-//     slug: 'cadastroDaBaseProva'
-//   },
-//   {
-//     url: '/cadastro-da-base/elaborador',
-//     name: '1.1.7 - Elaborador',
-//     slug: 'cadastroDaBaseElaborador'
-//   },
-//   {
-//     url: '/cadastro-da-base/avaliador',
-//     name: '1.1.8 - Avaliador',
-//     slug: 'cadastroDaBaseAvaliador'
-//   }
-// ]

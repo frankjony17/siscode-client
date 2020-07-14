@@ -28,7 +28,7 @@
               :icon="item.icon" :target="item.target"
               :isDisabled="item.isDisabled"
               :slug="item.slug">
-                <span class="truncate">{{ item.name }}</span>
+                <span class="truncate ">{{ item.name }}</span>
                 <vs-chip :color="item.tagColor" v-if="item.tag">{{ item.tag }}</vs-chip>
             </h-nav-menu-item>
           </template>

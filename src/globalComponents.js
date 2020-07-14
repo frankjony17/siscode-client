@@ -9,6 +9,7 @@
 
 
 import Vue from 'vue'
+import VueMask from 'v-mask'
 import VxTooltip from './layouts/components/vx-tooltip/VxTooltip.vue'
 import VxCard  from './components/vx-card/VxCard.vue'
 import VxList  from './components/vx-list/VxList.vue'
@@ -22,7 +23,7 @@ Vue.component(VxList.name, VxList)
 Vue.component(VxBreadcrumb.name, VxBreadcrumb)
 Vue.component(FeatherIcon.name, FeatherIcon)
 Vue.component(VxInputGroup.name, VxInputGroup)
-
+Vue.use(VueMask)
 
 // v-select component
 import vSelect from 'vue-select'

@@ -29,39 +29,45 @@
     </div>
 
     <div class="bookmark-container">
-      <feather-icon icon="StarIcon" :svgClasses="['stoke-current text-warning', textColor]" class="cursor-pointer p-2" @click.stop="showBookmarkPagesDropdown = !showBookmarkPagesDropdown" />
-      <div v-click-outside="outside" class="absolute bookmark-list w-1/3 xl:w-1/4 mt-4" v-if="showBookmarkPagesDropdown">
-        <vx-auto-suggest
-          ref="bookmarkAutoSuggest"
-          :autoFocus="true"
-          :data="navbarSearchAndPinList"
-          :initalData="{pages: starredPagesLimited.concat(starredPagesMore)}"
-          :searchLimit="5"
-          placeholder="Explore Vuexy..."
-          inputClassses="w-full"
-          show-action
-          show-pinned
-          hideGroupTitle
-          background-overlay
-          @input="hnd_search_query_update"
-          @selected="selected">
-
-          <!-- Pages Suggestion -->
-          <template v-slot:pages="{ suggestion }">
-            <div class="flex items-center justify-between">
-              <div class="flex items-end leading-none py-1">
-                <feather-icon :icon="suggestion.icon" svgClasses="h-5 w-5" class="mr-4" />
-                <span class="mt-1">{{ suggestion.title }}</span>
-              </div>
-              <feather-icon
-                icon="StarIcon"
-                :svgClasses="[{'text-warning': suggestion.is_bookmarked}, 'h-5 w-5 stroke-current mt-1']"
-                @click.stop="actionClicked(suggestion)" />
-            </div>
-          </template>
-
-        </vx-auto-suggest>
-      </div>
+      <vs-row vs-w="12">
+        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="2" vs-sm="2" vs-xs="12">
+          <feather-icon icon="StarIcon" :svgClasses="['stoke-current text-warning', textColor]" class="cursor-pointer p-2" @click.stop="showBookmarkPagesDropdown = !showBookmarkPagesDropdown" />
+          <div v-click-outside="outside" class="absolute bookmark-list w-1/3 xl:w-1/4 mt-4" v-if="showBookmarkPagesDropdown">
+            <vx-auto-suggest
+              ref="bookmarkAutoSuggest"
+              :autoFocus="true"
+              :data="navbarSearchAndPinList"
+              :initalData="{pages: starredPagesLimited.concat(starredPagesMore)}"
+              :searchLimit="5"
+              placeholder="Explore Vuexy..."
+              inputClassses="w-full"
+              show-action
+              show-pinned
+              hideGroupTitle
+              background-overlay
+              @input="hnd_search_query_update"
+              @selected="selected">
+              <!-- Pages Suggestion -->
+              <template v-slot:pages="{ suggestion }">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-end leading-none py-1">
+                    <feather-icon :icon="suggestion.icon" svgClasses="h-5 w-5" class="mr-4" />
+                    <span class="mt-1">{{ suggestion.title }}</span>
+                  </div>
+                  <feather-icon
+                    icon="StarIcon"
+                    :svgClasses="[{'text-warning': suggestion.is_bookmarked}, 'h-5 w-5 stroke-current mt-1']"
+                    @click.stop="actionClicked(suggestion)" />
+                </div>
+              </template>
+            </vx-auto-suggest>
+          </div>
+        </vs-col>
+        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="10" vs-sm="10" vs-xs="12">
+          <h4>ddddddddddddd</h4>
+          <span>ddddddddddd</span>
+        </vs-col>
+      </vs-row>
     </div>
   </div>
 </template>

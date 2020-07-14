@@ -14,8 +14,8 @@
         <span class="hidden sm:inline-block">, Todos os Direitos Reservados</span>
       </p>
         <span class="md:flex hidden items-center">
+            <span>Configurações Globais</span>
             <feather-icon icon="SettingsIcon" svgClasses="stroke-current text-warning w-6 h-6" class="ml-2" />
-            <span>&nbsp;Configurações Globais</span>
         </span>
     </footer>
 </template>

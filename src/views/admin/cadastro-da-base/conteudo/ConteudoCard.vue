@@ -126,8 +126,8 @@ export default {
       ]
     },
 
-    doSomething (area) {
-      console.log(area)
+    doSomething (value) {
+      console.log(value)
     }
 
   },

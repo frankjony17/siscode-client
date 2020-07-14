@@ -35,9 +35,14 @@ const router = new Router({
           component: () => import('./views/admin/cadastro-da-base/CadastrosGeraisTabs.vue')
         },
         { // questoes-gerais
-          path: '/questoes-gerais',
-          name: 'questoes-gerais',
+          path: '/estatistica/questoes-gerais',
+          name: 'estatistica-questoes-gerais',
           component: () => import('./views/admin/questoes-gerais/QuestoesGeraisTabs.vue')
+        },
+        { // questoes-gerais
+          path: '/solicitacao-questoes',
+          name: 'solicitacao-questoes',
+          component: () => import('./views/admin/solicitacao-questoes/SolicitacaoQuestoesTabs.vue')
         }
       ]
     },
