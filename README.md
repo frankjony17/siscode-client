@@ -48,7 +48,7 @@ https://siscode.coisasdeenem.com.br/simulado2     Módulo Correção de Redaçã
 o	Login: jeverson_jr@hotmail.com
 o	Senha: Jeversonjr123
 o	Vídeo Explicativo (Portal do Aluno): https://www.youtube.com/watch?v=OH34SlpQE70
-o	Vídeo Explicativo (Portal do Corretor de Redação): https://www.youtube.com/watch?v=PI0lyf4wuHg
+o	Vídeo Explicativo (Portal do Corretor de Redação): https://www.youtube.com/watch?v=PI0lyf4wuHg  / https://www.youtube.com/watch?v=PI0lyf4wuHg
 
 *Os menus do sistema irão ser de acordo com as telas desenhadas e os níveis de acesso criados. *Se vocês observarem os designs das telas do sistema, irão perceber que os menus são iguais para todos. Pois os menus precisam ser criados enquanto as telas do front-end são desenvolvidas.
 
