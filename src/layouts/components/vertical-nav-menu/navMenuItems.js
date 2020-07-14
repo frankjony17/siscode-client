@@ -23,7 +23,7 @@ export default [
         icon: 'ActivityIcon'
       },
       {
-        url: '/elaboracao',
+        url: '/estatistica',
         name: 'Elaboração',
         slug: 'simuladoElaboracao',
         submenu: [
@@ -49,7 +49,7 @@ export default [
             //   },
             //   {
             //     url: '/estatistica/media-questoes-disciplina',
-            //     name: '1.2.3 - Media de Questões/Disciplina',
+            //     name: '1.2.3 - Media de Questões/disciplina',
             //     slug: 'estatisticaMediaQuestoesDisciplina'
             //   },
             //   {
@@ -163,7 +163,7 @@ export default [
 //   },
 //   {
 //     url: '/cadastro-da-base/disciplina',
-//     name: '1.1.2 - Disciplina',
+//     name: '1.1.2 - disciplina',
 //     slug: 'cadastroDaBaseDisciplina'
 //   },
 //   {

@@ -31,24 +31,29 @@ const router = new Router({
         },
         { // cadastro-da-base
           path: '/cadastro-da-base',
-          name: 'area',
-          component: () => import('./views/cadastro-da-base/CadastrosGerais.vue')
+          name: 'cadastro-da-base',
+          component: () => import('./views/admin/cadastro-da-base/CadastrosGeraisTabs.vue')
+        },
+        { // questoes-gerais
+          path: '/questoes-gerais',
+          name: 'questoes-gerais',
+          component: () => import('./views/admin/questoes-gerais/QuestoesGeraisTabs.vue')
         }
       ]
     },
     {
       path: '',
-      component: () => import('@/layouts/full-page/FullPage.vue'),
+      component: () => import('./layouts/full-page/FullPage.vue'),
       children: [
         {
           path: '/pages/login',
           name: 'page-login',
-          component: () => import('@/views/pages/Login.vue')
+          component: () => import('./views/pages/Login.vue')
         },
         {
           path: '/pages/error-404',
           name: 'page-error-404',
-          component: () => import('@/views/pages/Error404.vue')
+          component: () => import('./views/pages/Error404.vue')
         }
       ]
     },

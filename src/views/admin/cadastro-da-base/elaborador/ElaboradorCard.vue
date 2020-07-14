@@ -26,11 +26,11 @@
 import Vue from 'vue'
 import VueMask from 'v-mask'
 
-import DadosPessoais from './elaborador/DadoPessoais'
-import Endereco from './elaborador/Endereco'
-import FormacoeQualificacoes from './elaborador/FormacoeQualificacoes'
-import ContratoComEscola from './elaborador/ContratoComEscola'
-import DadosBancario from './elaborador/DadosBancario'
+import DadosPessoais from './template/DadoPessoais'
+import Endereco from './template/Endereco'
+import FormacoeQualificacoes from './template/FormacoeQualificacoes'
+import ContratoComEscola from './template/ContratoComEscola'
+import DadosBancario from './template/DadosBancario'
 
 Vue.use(VueMask)
 

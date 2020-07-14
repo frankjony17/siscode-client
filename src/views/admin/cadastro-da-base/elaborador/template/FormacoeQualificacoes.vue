@@ -124,10 +124,10 @@ import Vue from 'vue'
 import VueMask from 'v-mask'
 import vSelect from 'vue-select'
 import { ValidationProvider } from 'vee-validate'
-import professions from '../../../store/professions'
-import educationLevel from '../../../store/educationLevel'
-import universities from '../../../store/universities'
-import language from '../../../store/language'
+import professions from '@/store/professions'
+import educationLevel from '@/store/educationLevel'
+import universities from '@/store/universities'
+import language from '@/store/language'
 
 Vue.use(VueMask)
 

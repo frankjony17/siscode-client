@@ -1,50 +1,57 @@
 <template>
   <vx-card title="Simulado/Elaboração/
-  Cadastros/Ensino">
+  Cadastros/Conteúdos">
+    <!-- Input Text -->
     <vs-row vs-w="12">
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="8" vs-sm="6" vs-xs="12">
+      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
         <vs-input
-          label="Ensino"
-          placeholder="Ex.: Ensino Medio"
-          style="width: 100%;"
-          v-model="ensino"
-        />
-        <vx-tooltip text="Conjunto de Disciplinas que compõen um curso!" position="right" >
-          <vs-button type="line" icon="info" />
-        </vx-tooltip>
-      </vs-col>
-      <vs-col vs-type="flex" vs-justify="space-between" vs-align="space-between" vs-lg="2" vs-sm="2" vs-xs="2"></vs-col>
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="2" vs-sm="4" vs-xs="12">
-        <vs-input
-          label="Sigla"
-          placeholder="Ex.: E.M."
+          label="Conteúdos"
+          placeholder="Ex.: Nomenclatura de TODO .."
           style="width: 98%;"
-          v-model="sigla"
+          v-model="conteudo"
         />
-        <vx-tooltip text="Sigla do Ensino!" position="right" >
-          <vs-button type="line" icon="info" />
-        </vx-tooltip>
+      </vs-col>
+      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
+        <vs-input
+          label="Abreviação"
+          placeholder="Ex.: Nome de TODO"
+          style="width: 98%;"
+          v-model="abreviacao"
+        />
       </vs-col>
     </vs-row>
+    <!-- End Input Text -->
     <br>
-    <label for class="vs-input--label">Disciplinas</label>
+    <!-- Combobox - Select -->
     <vs-row>
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="12" vs-sm="12" vs-xs="12">
-        <v-select
-          :options="disciplinaList"
-          label="nome"
-          index="id"
-          style="width: 100%;"
-          @input="doSomething"
-          placeholder="Lista de Disciplinas"
-          multiple
-          :closeOnSelect="false"
-        />
-        <vx-tooltip text="Selecione uma Disciplina!" position="right" >
-          <vs-button type="line" icon="info" />
-        </vx-tooltip>
+      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
+        <div class="label-input-siscode">
+          <label for class="vs-input--label">Disciplina</label>
+          <v-select
+            :options="disciplinaList"
+            label="nome"
+            index="id"
+            style="width: 98%;"
+            @input="doSomething"
+            placeholder="Lista de Disciplinas"
+          />
+        </div>
+      </vs-col>
+      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="6" vs-sm="6" vs-xs="12">
+        <div class="label-input-siscode">
+          <label for class="vs-input--label">Matérias</label>
+          <v-select
+            :options="materiaList"
+            label="nome"
+            index="id"
+            style="width: 98%;"
+            @input="doSomething"
+            placeholder="Lista de Matérias"
+          />
+        </div>
       </vs-col>
     </vs-row>
+    <!-- End Combobox - Select -->
     <br>
     <div class="float-right">
       <vs-button color="warning" type="border" icon="add">CANCELAR</vs-button>
@@ -66,16 +73,18 @@ export default {
   },
   data () {
     return {
-      sigla: '',
-      ensino: '',
       selected: '',
+      conteudo: '',
+      abreviacao: '',
+      disciplina: '',
+      materiaList: [],
       disciplinaList: []
     }
   },
   methods: {
-    // Load Disciplina from DB.
-    loadDisciplina () {
-      this.disciplinaList = [
+    // Load Area Relacionada from DB.
+    loadAreaRelacionada () {
+      this.materiaList = [
         {
           id: 1,
           nome: 'Matemática'
@@ -87,7 +96,9 @@ export default {
         {
           id: 3,
           nome: 'Português'
-        },
+        }
+      ]
+      this.disciplinaList = [
         {
           id: 4,
           nome: 'História'
@@ -115,12 +126,13 @@ export default {
       ]
     },
 
-    doSomething (disciplina) {
-      console.log(disciplina)
+    doSomething (area) {
+      console.log(area)
     }
+
   },
   created () {
-    this.loadDisciplina()
+    this.loadAreaRelacionada()
   }
 }
 </script>

@@ -25,13 +25,13 @@
 </template>
 
 <script>
-import Area from './Area'
-import Disciplina from './Disciplina'
-import Materia from './Materia'
-import Conteudo from './Conteudo'
-import Prova from './Prova'
-import Elaborador from './Elaborador'
-import Avaliador from './Avaliador'
+import Area from './area/AreaCard'
+import Disciplina from './disciplina/DisciplinaCard'
+import Materia from './materia/MateriaCard'
+import Conteudo from './conteudo/ConteudoCard'
+import Prova from './prova/ProvaCard'
+import Elaborador from './elaborador/ElaboradorCard'
+import Avaliador from './avaliador/AvaliadorCard'
 
 export default {
   components: {

@@ -48,7 +48,7 @@ import Vue from 'vue'
 import VueMask from 'v-mask'
 import vSelect from 'vue-select'
 import { ValidationProvider } from 'vee-validate'
-import bankAccountType from '../../../store/bankAccountType'
+import bankAccountType from '@/store/bankAccountType'
 
 Vue.use(VueMask)
 

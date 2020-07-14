@@ -58,7 +58,7 @@ import Vue from 'vue'
 import VueMask from 'v-mask'
 import vSelect from 'vue-select'
 import { ValidationProvider } from 'vee-validate'
-import statesCities from '../../../store/statesCities'
+import statesCities from '@/store/statesCities'
 
 Vue.use(VueMask)
 

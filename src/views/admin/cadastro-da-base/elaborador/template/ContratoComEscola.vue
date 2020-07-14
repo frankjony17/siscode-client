@@ -34,8 +34,8 @@ import Vue from 'vue'
 import VueMask from 'v-mask'
 import vSelect from 'vue-select'
 import { ValidationProvider } from 'vee-validate'
-import professions from '../../../store/professions'
-import universities from '../../../store/universities'
+import professions from '@/store/professions'
+import universities from '@/store/universities'
 
 Vue.use(VueMask)
 

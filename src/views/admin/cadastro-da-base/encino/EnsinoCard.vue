@@ -1,15 +1,15 @@
 <template>
   <vx-card title="Simulado/Elaboração/
-  Cadastros/Matéria">
+  Cadastros/Ensino">
     <vs-row vs-w="12">
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="8" vs-sm="6" vs-xs="12">
         <vs-input
-          label="Matéria"
-          placeholder="Ex.: História do Brasil .."
+          label="Ensino"
+          placeholder="Ex.: Ensino Medio"
           style="width: 100%;"
-          v-model="materia"
+          v-model="ensino"
         />
-        <vx-tooltip text="Nome do Conjunto de Conteúdos!" position="right" >
+        <vx-tooltip text="Conjunto de Disciplinas que compõen um curso!" position="right" >
           <vs-button type="line" icon="info" />
         </vx-tooltip>
       </vs-col>
@@ -17,19 +17,19 @@
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="2" vs-sm="4" vs-xs="12">
         <vs-input
           label="Sigla"
-          placeholder="Ex.: HisBR"
+          placeholder="Ex.: E.M."
           style="width: 98%;"
           v-model="sigla"
         />
-        <vx-tooltip text="Sigla da Matéria!" position="right" >
+        <vx-tooltip text="Sigla do Ensino!" position="right" >
           <vs-button type="line" icon="info" />
         </vx-tooltip>
       </vs-col>
     </vs-row>
     <br>
-    <label for class="vs-input--label">Disciplina</label>
+    <label for class="vs-input--label">Disciplinas</label>
     <vs-row>
-      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="8" vs-sm="6" vs-xs="12">
+      <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="12" vs-sm="12" vs-xs="12">
         <v-select
           :options="disciplinaList"
           label="nome"
@@ -37,6 +37,8 @@
           style="width: 100%;"
           @input="doSomething"
           placeholder="Lista de Disciplinas"
+          multiple
+          :closeOnSelect="false"
         />
         <vx-tooltip text="Selecione uma Disciplina!" position="right" >
           <vs-button type="line" icon="info" />
@@ -65,13 +67,13 @@ export default {
   data () {
     return {
       sigla: '',
-      materia: '',
+      ensino: '',
       selected: '',
       disciplinaList: []
     }
   },
   methods: {
-    // Load Disciplina from DB.
+    // Load disciplina from DB.
     loadDisciplina () {
       this.disciplinaList = [
         {
