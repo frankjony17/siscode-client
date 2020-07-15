@@ -51,9 +51,9 @@ const router = new Router({
       component: () => import('./layouts/full-page/FullPage.vue'),
       children: [
         {
-          path: '/pages/login',
-          name: 'page-login',
-          component: () => import('./views/pages/Login.vue')
+          path: '/security/login',
+          name: 'security-login',
+          component: () => import('./views/security/Login.vue')
         },
         {
           path: '/pages/error-404',
@@ -74,6 +74,20 @@ router.afterEach(() => {
   const appLoading = document.getElementById('loading-bg')
   if (appLoading) {
     appLoading.style.display = 'none'
+  }
+})
+
+router.beforeEach((to, from, next) => {
+  const publicPages = ['/security/login', '/pages/error-404']
+  const authRequired = !publicPages.includes(to.path)
+  const loggedIn = localStorage.getItem('user')
+
+  // trying to access a restricted page + not logged in
+  // redirect to login page
+  if (authRequired && !loggedIn) {
+    next('/security/login')
+  } else {
+    next()
   }
 })
 
