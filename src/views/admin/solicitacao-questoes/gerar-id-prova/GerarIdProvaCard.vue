@@ -1,5 +1,5 @@
 <template>
-  <vx-card title="Simulado/Elaboração/Solicitacao de Questoes" fixed-height="true">
+  <vx-card title="Simulado/Elaboração/Solicitacao-Questoes/Gerar ID da Prova:" fixed-height="true">
     <vs-row vs-w="12">
       <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="12" vs-sm="6" vs-xs="12">
         <div class="label-input-siscode">

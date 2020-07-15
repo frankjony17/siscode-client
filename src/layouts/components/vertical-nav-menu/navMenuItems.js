@@ -39,7 +39,7 @@ export default [
           },
           {
             url: '/solicitacao-questoes/',
-            name: 'Solicitação/Questões',
+            name: 'Solicitação-Questões',
             slug: 'solicitacao-questoes'
             // submenu: [
             //   {

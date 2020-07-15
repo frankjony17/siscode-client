@@ -27,10 +27,9 @@
         </vs-dropdown-menu>
       </vs-dropdown>
     </div>
-
     <div class="bookmark-container">
       <vs-row vs-w="12">
-        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="2" vs-sm="2" vs-xs="12">
+        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="1" vs-sm="1" vs-xs="12">
           <feather-icon icon="StarIcon" :svgClasses="['stoke-current text-warning', textColor]" class="cursor-pointer p-2" @click.stop="showBookmarkPagesDropdown = !showBookmarkPagesDropdown" />
           <div v-click-outside="outside" class="absolute bookmark-list w-1/3 xl:w-1/4 mt-4" v-if="showBookmarkPagesDropdown">
             <vx-auto-suggest
@@ -63,9 +62,8 @@
             </vx-auto-suggest>
           </div>
         </vs-col>
-        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="10" vs-sm="10" vs-xs="12">
-          <h4>ddddddddddddd</h4>
-          <span>ddddddddddd</span>
+        <vs-col vs-type="flex" vs-justify="flex-start" vs-align="flex-start" vs-lg="11" vs-sm="11" vs-xs="12">
+          <span style="padding: 10px; font-weight: bold">{{ this.bookmarksTitle }}</span>
         </vs-col>
       </vs-row>
     </div>
@@ -89,7 +87,8 @@ export default {
   },
   data () {
     return {
-      showBookmarkPagesDropdown : false
+      bookmarksTitle: '',
+      showBookmarkPagesDropdown: false
     }
   },
   watch: {

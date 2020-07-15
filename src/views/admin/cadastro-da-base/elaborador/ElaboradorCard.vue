@@ -11,12 +11,12 @@
     <!-- Dados Bancários -->
     <v-dados-bancario />
 
-    <div class="float-right">
-      <vs-button color="warning" type="border" icon="add">CANCELAR</vs-button>
-      <vs-button color="primary" type="filled" icon="close">CADASTRAR</vs-button>
+    <div class="float-right div-button-siscode">
+      <vs-button color="primary" type="filled" icon="close" style="width: 100%; padding-left: 5px; padding-right: 5px;">CADASTRAR</vs-button>
     </div>
-    <br>
-    <br>
+    <div class="float-right div-button-siscode" style="margin: 5px">
+      <vs-button color="warning" type="border" icon="add" style="width: 100%; padding-left: 5px; padding-right: 5px;">CANCELAR</vs-button>
+    </div>
     <br>
     <br>
   </vx-card>
