@@ -9,17 +9,12 @@ import geradorHorarioSidebarItem from '@/views/security/geradorHorarioSidebarIte
 const user = JSON.parse(localStorage.getItem('user'))
 let itemSidebar = []
 
-console.log('START')
-console.log(itemSidebar)
-
 if (user.roles.find(rol => rol === 'admin')) {
   itemSidebar = adminSidebarItem
-  console.log('adminSidebarItem')
 }
 
 if (user.roles.find(rol => rol === 'role1')) {
   itemSidebar = geradorHorarioSidebarItem
-  console.log('geradorHorarioSidebarItem')
 }
 
 export default itemSidebar

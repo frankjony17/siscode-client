@@ -4,8 +4,16 @@
 */
 import Vue from 'vue'
 import Router from 'vue-router'
+import routerAdmin from  './router/adminRouter'
+import routerGeradorHorarioRouter from  './router/routerGeradorHorarioRouter'
 
 Vue.use(Router)
+
+// All users.
+let routesMain = {
+  path: '',
+  component: () => import('./layouts/main/Main.vue')
+}
 
 const router = new Router({
   mode: 'history',
@@ -14,38 +22,7 @@ const router = new Router({
     return { x: 0, y: 0 }
   },
   routes: [
-    {
-      path: '',
-      component: () => import('./layouts/main/Main.vue'),
-      // Theme Routes
-      children: [
-        {
-          path: '/',
-          name: 'inicio',
-          component: () => import('./views/inicio/Inicio.vue')
-        },
-        {
-          path: '/dashboard',
-          name: 'dashboard',
-          component: () => import('./views/dashboard/Dashboard.vue')
-        },
-        { // cadastro-da-base
-          path: '/cadastro-da-base',
-          name: 'cadastro-da-base',
-          component: () => import('./views/admin/cadastro-da-base/CadastrosGeraisTabs.vue')
-        },
-        { // questoes-gerais
-          path: '/estatistica/questoes-gerais',
-          name: 'estatistica-questoes-gerais',
-          component: () => import('./views/admin/questoes-gerais/QuestoesGeraisTabs.vue')
-        },
-        { // questoes-gerais
-          path: '/solicitacao-questoes',
-          name: 'solicitacao-questoes',
-          component: () => import('./views/admin/solicitacao-questoes/SolicitacaoQuestoesTabs.vue')
-        }
-      ]
-    },
+    routesMain,
     {
       path: '',
       component: () => import('./layouts/full-page/FullPage.vue'),
@@ -80,11 +57,21 @@ router.afterEach(() => {
 router.beforeEach((to, from, next) => {
   const publicPages = ['/security/login', '/pages/error-404']
   const authRequired = !publicPages.includes(to.path)
-  const loggedIn = localStorage.getItem('user')
-
-  // trying to access a restricted page + not logged in
-  // redirect to login page
-  if (authRequired && !loggedIn) {
+  const user = JSON.parse(localStorage.getItem('user'))
+  // Add rout by role.
+  if (user !== null) {
+    // If user is admin add router for hem.
+    if (user.roles.find(rol => rol === 'admin')) {
+      routesMain = routerAdmin
+      router.addRoutes([routesMain])
+    }
+    // If user is role1.
+    if (user.roles.find(rol => rol === 'role1')) {
+      routesMain = routerGeradorHorarioRouter
+      router.addRoutes([routesMain])
+    }
+  }
+  if (authRequired && !user) {
     next('/security/login')
   } else {
     next()

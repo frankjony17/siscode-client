@@ -11,9 +11,9 @@ export default [
     icon: 'HomeIcon'
   },
   {
-    url: '/gerador-horario/ajuda ',
-    name: 'Ajuda ',
-    slug: 'ajuda ',
+    url: '/gerador-horario/ajuda',
+    name: 'Ajuda',
+    slug: 'ajuda',
     icon: 'HelpIcon',
     submenu: [
       {
@@ -45,7 +45,7 @@ export default [
   },
   {
     url: '/gerador-horario/instituicao',
-    name: 'instituicao',
+    name: 'Instituição',
     slug: 'instituicao',
     icon: 'UmbrellaIcon',
     submenu: [
