@@ -44,7 +44,7 @@ https://siscode.coisasdeenem.com.br/simulado   Módulo Corretor TRI e Cadastro d
 
 https://siscode.coisasdeenem.com.br/simulado2     Módulo Correção de Redação.
 
-•	*Usar como site de referência para o módulo de gerador de horário: *https://plataforma.poxalulu.com.br/
+•	*Usar como site de referência para o módulo de redação (front-end do aluno): *https://plataforma.poxalulu.com.br/
 o	Login: jeverson_jr@hotmail.com
 o	Senha: Jeversonjr123
 o	Vídeo Explicativo (Portal do Aluno): https://www.youtube.com/watch?v=OH34SlpQE70
